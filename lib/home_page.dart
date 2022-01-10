@@ -14,7 +14,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   Future<List<WallPaper>> getData() async {
-    String url = 'https://api.unsplash.com/photos/?per_page=2&client_id=IsjX04rWVx2WbzL6IFZT7ioO0utRddU_WAKxNk3yIPg';
+    String url = 'https://api.unsplash.com/photos/?per_page=30&client_id=IsjX04rWVx2WbzL6IFZT7ioO0utRddU_WAKxNk3yIPg';
     Response response = await http.get(Uri.parse(url));
     if (response.statusCode == 200) {
       var jsonData = jsonDecode(response.body);
